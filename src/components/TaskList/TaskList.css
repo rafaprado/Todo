@@ -1,0 +1,145 @@
+.taskList {
+    margin-top: 64px !important;
+    max-width: 660px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.taskList .progress {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    color: #8257E5;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.taskList .task {
+    background-color: #29292E;
+    padding: 16px;
+    border-radius: 4px;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 1.3;
+    min-height: 56px;
+}
+
+.taskList ul .task + .task {
+    margin-top: 8px;
+}
+
+.task__content {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    gap: 8px
+}
+
+.task__actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.task__actions--editing {
+    display: none;
+}
+
+.task:hover .task-button {
+    visibility: visible;
+    opacity: 1;
+}
+
+.task-button {
+    transition: all .5s;
+    background-color: #121214;
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    border: none;
+    color: #FFF;
+    text-align: center;
+    line-height: 12px;
+    cursor: pointer;
+    display: inline-block;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.task-button > * {
+    pointer-events: none;
+}
+
+.created, .completed {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.created span, .completed span {
+    color: #FFF;
+    padding: 4px;
+    box-sizing: border-box;
+    background-color: #29292E;
+    font-size: 12px;
+    border-radius: 2px;
+}
+
+.task-completed {
+    opacity: .5;
+}
+
+.task-completed .edit-task {
+    pointer-events: none;
+}
+
+.task-completed .task__text {
+    text-decoration: line-through;
+}
+
+.empty-taskList {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.task__text {
+    border: none;
+    background: transparent;
+    color: #FFF;
+    font-size: 16px;
+    outline: none;
+    flex: 1;
+}
+
+.task__text--editing {
+    color: #ffcd1e;
+}
+
+.task-checkbox-input {
+    display: none;
+}
+.task-checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    border: 2px solid #8257E5;
+    cursor: pointer;
+}
+
+.task-checkbox-input:checked + .task-checkbox {
+    background-color: #8257E5;
+}
+
+.task-checkbox__check-icon {
+    display: none;
+}
+
+.task-checkbox-input:checked + .task-checkbox > .task-checkbox__check-icon {
+    display: block;
+}
